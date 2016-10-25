@@ -1,0 +1,44 @@
+#titulo{
+	background: #198783;
+	font-size: 30px;
+}
+
+#descripcion{
+	background: #215917;
+	font-size: 20px; 
+}
+
+.contenedor{
+	clear: both;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 8px;
+	display: block;
+	background: #2e1d66; 
+}
+
+.pic{
+	float: left;
+	width:100%;
+	height:217px;
+	border-right: 3px solid white;
+	background: url(http://www.corelangs.com/css/box/img/tiger.png) no-repeat;
+}
+
+
+.text{
+	width:100%;
+	height:50px;
+	background:#FFF;
+	opacity:0;
+}
+
+.pic:hover .text{
+	opacity:0.6;
+	text-align: center;
+	color:#000000;
+	font-size:20px;
+	font-family:"Times New Roman", Times, serif;
+	padding: 0;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<title> Contact form</title>
+	<h1> Contact Form</h1>
+</head>
+<body>
+	<form id="contact-form">
+	<ul>
+		<li>
+			Name: <input type="text" name="nombre" id="nombre" value="" required="" />
+		</li>
+		<li>
+			Lastname: <input type="text" name="apellido" id="apellido" value="" required="" />
+		</li>
+		<li>
+			Email: <input type="text" name="email" id="email" value="" required="" />
+		</li>
+		<li>
+			Birthday: <input type="date" name="cumpleaños" id="cumpleaños" value="" required="" />
+		</li>
+		<li>
+			Favourite Sport: <input type="text" name="deporte" list="mydata"/>
+			<datalist id="mydata">
+				<option label="Soccer" value="soccer" />
+				<option label="Tennis" value="tennis" />
+				<option label="Volley" value="volley" />
+				<option label="Basketball" value="basket" />
+			</datalist>
+		</li>
+		<li>
+			About: <textarea name="bio"	id="bio" cols="25"	rows="3"></textarea>
+		</li>
+		<li>
+			<input type="submit" name="submit" />
+			<input type="reset" name="reset"/>
+		</li>
+		</ul>
+	</form>
+</body>
+</html>
