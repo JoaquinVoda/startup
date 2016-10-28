@@ -1,0 +1,50 @@
+.titulo{
+	font-size: 30px;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+.contenedor{
+	height: 400px;
+	width: 100%;
+}
+
+.random{
+	float: left;
+	height: 50%;
+	width: 80%;
+	text-align: left;
+}
+
+.repos{
+	float: right;
+	height: 50%;
+	width: 20%;
+	text-align: left;
+}
+
+#repos>*{
+	background-color: #EFF0F1;
+}
+
+#matriz{
+	border: 1px solid black;
+}
+
+#matriz>*{
+	border: 1px solid black;
+}
+
+.oculto{
+	clear: both;
+	height: 100px;
+	width: 80%;
+	text-align: center;
+	display: none;
+}
+
+.boton{
+	position: absolute;
+	left: 47%;
+}
