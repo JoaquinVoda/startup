@@ -1,7 +1,9 @@
 // 4 ->DONE
 EventEmitter.call(Movie.prototype);
 
-//   1  -  8->DONE
+
+
+//   1->DONE -  8->DONE
 function Movie(t, y, d) {
 	
 	this.title = t;
@@ -34,7 +36,7 @@ function Movie(t, y, d) {
 	}
 }
 
-//3
+//3 ->DONE
 function EventEmitter(){
 	this.listener; 
 	this.func;
@@ -56,13 +58,13 @@ function EventEmitter(){
 	}
 }
 
-// 7
+// 7 ->DONE
 function Actor(_fullname, _age){
 	this.full_name = _fullname;
 	this.age = _age;
 }
 
-// 5
+// 5-> DONE
 function Logger(){
 
 	this.log = function(info){
@@ -70,15 +72,15 @@ function Logger(){
 	}
 }
 
-//6
-var Social = function(){
+//6 ->DONE
+var Social = {
 
-	this.share(friendName){
-		console.log("Share" + movie.title + "with" + friendName);
-	}
+	share : function(friendName){
+		return "Share " + this.title + " with " + friendName;
+	},
 
-	this.like(friendName){
-		console.log(friendName + "likes" + movie.title);
+	like : function(friendName){
+		return friendName + " likes " + this.title;
 	}
 }
 
@@ -87,9 +89,27 @@ $(document).ready(function(){
 	let enders_game = new Movie("Ender's Game" , 2013 , 114);
 	let whiplash = new Movie("Whiplash", 2014 , 107);
 
-	let logger = new Logger();
-	
-
 
 	Object.assign(whiplash, Social);
+	Object.assign(enders_game, Social);
+
+	let logger = new Logger();
+	whiplash.on('play', logger.log);
+	whiplash.play();
+
+	console.log(whiplash.share('Joaquin'));
+	console.log(enders_game.like('Flor'));
+
+	let actor = new Actor('Jack Black', 48);
+	let otherCast = [
+		new Actor ('Miranda Cosgrove', 25),
+		new Actor ('Mike White', 46),
+		new Actor ('Sarah Silverman', 44)
+	];
+
+	school_of_rock.addCast(otherCast);
+	school_of_rock.addCast(actor);
+	console.log(school_of_rock.cast);
+
+
 })
